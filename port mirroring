@@ -1,0 +1,27 @@
+!--- Output suppressed. sample config!
+interface FastEthernet0/1port 
+monitor FastEthernet0/2 port 
+monitor FastEthernet0/5 port 
+monitor VLAN1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+switchport access vlan 2
+!
+interface FastEthernet0/4 
+port monitor FastEthernet0/3 
+port monitor FastEthernet0/6 
+switchport access vlan 2
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6 
+switchport access vlan 2
+!
+!--- Output suppressed.!
+interface VLAN1 ip address 10.200.8.136 255.255.252.0 
+no ip directed-broadcast 
+no ip route-cache
+!
+!--- Output suppressed.
